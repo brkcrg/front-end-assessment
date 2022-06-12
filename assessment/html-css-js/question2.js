@@ -7,15 +7,22 @@ function doExpensiveTask(input) {
   return result;
 }
 
+var oldResult;
+
 function optimizeFunction(func) {
   // You shouldn't need to edit anywhere else
   // Do your work inside this function
   // SOLUTION:
+  
+
+    
 
 }
 
+
 // anOptimizedFunc shouldn't execute the expensive task if new input is same as the previous one
 const anOptimizedFunc = optimizeFunction(doExpensiveTask);
+
 anOptimizedFunc(2); // Should print: Doing expensive task...: 4
 anOptimizedFunc(2); // Should print: Same input, no need to calculate: 4
 anOptimizedFunc(4); // Should print: Doing expensive task...: 8

@@ -46,8 +46,7 @@ const positionsWithOrgNames = [];
 for (let i = 0; i < positions.length; i++) {
   for (let j = 0; j < organizations.length; j++) {
     if (positions[i].orgId === organizations[j].id) {
-      positionsWithOrgNames.push(
-      {
+      positionsWithOrgNames.push({
         name:positions[i].name,
         orgName:organizations[j].name
       }
@@ -59,13 +58,3 @@ for (let i = 0; i < positions.length; i++) {
 
  // so that when we log the final result
 console.log(positionsWithOrgNames)
-/* Should print:
-
-[
-  {name: "pos0", orgName: "org2"},
-  {name: "pos1", orgName: "org0"},
-  {name: "pos2", orgName: "org1"},
-  {name: "pos3", orgName: "org2"}
-]
-
-*/

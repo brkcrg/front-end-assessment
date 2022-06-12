@@ -45,12 +45,12 @@ colorfulLog("**** PART 1", "cyan")
 const simpleArray = [1, 2, 3, 4]
 
 const mappedArray = simpleArray.map(x => 2*x)
-colorfulLog("mappedArray")
+//colorfulLog("mappedArray")
 console.log(mappedArray);
 
 // even numbers we want to keep
 const filteredArray = simpleArray.filter(x => x % 2 === 0)
-colorfulLog("filteredArray");
+//colorfulLog("filteredArray");
 console.log(filteredArray);
 
 // Reduces the array into one value
@@ -67,7 +67,7 @@ const arrayOfObjects = [{a:1}, {a:2}, {a:3}]
 const newArrayOfObjects = [...arrayOfObjects]
 
 // See that arrays are different
-colorfulLog("arrayOfObjects === newArrayOfObjects")
+//colorfulLog("arrayOfObjects === newArrayOfObjects")
 console.log(arrayOfObjects === newArrayOfObjects);
 
 // Since arrays are different, changing something in one array shouldn't affect the other, right?
