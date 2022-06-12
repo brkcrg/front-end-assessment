@@ -40,21 +40,19 @@ const organizations = [
 
 
 const positionsWithOrgNames = [];
-
-
-
 for (let i = 0; i < positions.length; i++) {
   for (let j = 0; j < organizations.length; j++) {
     if (positions[i].orgId === organizations[j].id) {
-      positionsWithOrgNames.push(
-      {
-        name:positions[i].name,
-        orgName:organizations[j].name
-      }
-      );
-    }
+      positionsWithOrgNames.push({
+        name: positions[i].name,
+        orgName: organizations[j].name,
+      });
+    } 
   }
 }
+
+
+
     
 
  // so that when we log the final result
