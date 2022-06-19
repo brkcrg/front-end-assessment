@@ -1,60 +1,37 @@
-const positions = [
-  {
-    name: "pos0",
-    orgId: "1427ff32-ad88-4a46-ab2b-0b61337c1a11"
-  },
-  {
-    name: "pos1",
-    orgId: "a6e3b058-3596-413a-9810-66f5098f7c30"
-  },
-  {
-    name: "pos2",
-    orgId: "b9b88fd0-d36e-48ba-8607-07377f5c2907"
-  },
-  {
-    name: "pos3",
-    orgId: "1427ff32-ad88-4a46-ab2b-0b61337c1a11"
-  }
-];
-
-const organizations = [
-  {
-    id: "a6e3b058-3596-413a-9810-66f5098f7c30",
-    name: "org0"
-  },
-  {
-    id: "b9b88fd0-d36e-48ba-8607-07377f5c2907",
-    name: "org1"
-  },
-  {
-    id: "1427ff32-ad88-4a46-ab2b-0b61337c1a11",
-    name: "org2"
-  }
-];
-
 // ASSESSMENT:
-// Using array methods, create a new array of objects named 'positionsWithOrgNames'
-// We want to put position name and its organization name together, using the orgId relationship
-// Bonus point if you think about the time complexity, a fast solution, these arrays can be huge (thousands of elements maybe!)
-// SOLUTION:
+// Fill inside of the optimizeFunction function!
 
-
-const positionsWithOrgNames = [];
-
-
-
-for (let i = 0; i < positions.length; i++) {
-  for (let j = 0; j < organizations.length; j++) {
-    if (positions[i].orgId === organizations[j].id) {
-      positionsWithOrgNames.push({
-        name:positions[i].name,
-        orgName:organizations[j].name
-      }
-      );
-    }
-  }
+function doExpensiveTask(input) {
+  const result = 2 * input;
+  console.log("Doing expensive task...:", result);
+  return result;
 }
-    
 
- // so that when we log the final result
-console.log(positionsWithOrgNames)
+var oldResult;
+var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/gm;
+var ARGUMENT_NAMES = /([^\s,]+)/g;
+function optimizeFunction(func) {
+  // You shouldn't need to edit anywhere else
+  // Do your work inside this function
+  // SOLUTION:
+
+  var fnStr = func.toString().replace(STRIP_COMMENTS, "");
+  var result = fnStr
+    .slice(fnStr.indexOf("(") + 1, fnStr.indexOf(")"))
+    .match(ARGUMENT_NAMES);
+  if (result === null) result = [];
+  return console.log(result);
+
+  //     var str = func.toString();
+  //     console.log(str);
+  //     var index=str.indexOf(":");
+
+  //     console.log(index);
+  //     console.log();
+  // return func;
+}
+
+// anOptimizedFunc shouldn't execute the expensive task if new input is same as the previous one
+const anOptimizedFunc = optimizeFunction(doExpensiveTask);
+
+anOptimizedFunc(2);

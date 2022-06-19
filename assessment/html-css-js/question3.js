@@ -9,4 +9,14 @@
 // Hint: google 'debouncing'
 
 // SOLUTION:
+let input = document.getElementById("a_text");
+function log() {
+   console.log(input.value)
+}
+input.addEventListener("change", function () {
+  console.log(input.value);
+});
+ setTimeout(log, 500);
+
+
 
